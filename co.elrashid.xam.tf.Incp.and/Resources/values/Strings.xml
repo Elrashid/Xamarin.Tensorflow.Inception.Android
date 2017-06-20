@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">co.elrashid.xam.tf.Incp.and</string>
+   <string name="description_info">Info</string>
+  <string name="request_permission">This sample needs camera permission.</string>
+  <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+  
 </resources>

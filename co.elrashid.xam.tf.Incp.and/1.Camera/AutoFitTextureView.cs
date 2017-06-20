@@ -1,0 +1,62 @@
+﻿//https://github.com/xamarin/monodroid-samples/tree/8d91a9a7fa0b958e4f649a644de4ea98ca1cf914/android5.0/Camera2Basic
+
+using System;
+using Android.Content;
+using Android.Util;
+using Android.Views;
+
+namespace co.elrashid.xam.tf.Incp.and.Camera
+{
+    public class AutoFitTextureView : TextureView
+    {
+        private int mRatioWidth = 0;
+        private int mRatioHeight = 0;
+
+        public AutoFitTextureView(Context context)
+            : this(context, null)
+        {
+
+        }
+        public AutoFitTextureView(Context context, IAttributeSet attrs)
+            : this(context, attrs, 0)
+        {
+
+        }
+        public AutoFitTextureView(Context context, IAttributeSet attrs, int defStyle)
+            : base(context, attrs, defStyle)
+        {
+
+        }
+
+        public void SetAspectRatio(int width, int height)
+        {
+            if (width == 0 || height == 0)
+                throw new ArgumentException("Size cannot be negative.");
+            mRatioWidth = width;
+            mRatioHeight = height;
+            RequestLayout();
+        }
+
+        protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
+        {
+            base.OnMeasure(widthMeasureSpec, heightMeasureSpec);
+            int width = MeasureSpec.GetSize(widthMeasureSpec);
+            int height = MeasureSpec.GetSize(heightMeasureSpec);
+            if (0 == mRatioWidth || 0 == mRatioHeight)
+            {
+                SetMeasuredDimension(width, height);
+            }
+            else
+            {
+                if (width < (float)height * mRatioWidth / (float)mRatioHeight)
+                {
+                    SetMeasuredDimension(width, width * mRatioHeight / mRatioWidth);
+                }
+                else
+                {
+                    SetMeasuredDimension(height * mRatioWidth / mRatioHeight, height);
+                }
+            }
+        }
+    }
+}

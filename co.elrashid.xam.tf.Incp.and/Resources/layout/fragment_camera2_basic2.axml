@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <co.elrashid.xam.tf.Incp.and.Camera.AutoFitTextureView
+        android:id="@+id/texture2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+  <co.elrashid.xam.tf.Incp.and.CameraTensorflowIntegration.RecognitionScoreView
+      android:id="@+id/results2"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_alignParentTop="true" />
+  <co.elrashid.xam.tf.Incp.and.CameraTensorflowIntegration.OverlayView
+      android:id="@+id/debug_overlay2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
