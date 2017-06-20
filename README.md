@@ -4,4 +4,10 @@
 Xamarin Tensorflow Inception Android
 
 
-https://blog.elrashid.co/mobile-app-offline-machine-learning-tensorflow-and-xamarin-c73a4dd40813
+tutorial https://goo.gl/CMDP5J
+
+
+apk download https://goo.gl/UBTDRJ
+
+
+Images to test the app with https://goo.gl/Gp95rC
